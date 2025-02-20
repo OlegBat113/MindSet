@@ -1,11 +1,8 @@
 import geopandas as gpd
 import matplotlib.pyplot as plt
 from PIL import Image
-#import cartopy.crs as ccrs
-#import matplotlib.image as mpimg
 from shapely.geometry import Polygon, Point
 import random
-#import shapely.wkt
 from shapely.errors import GEOSException
 
 # Загрузка входных данных
