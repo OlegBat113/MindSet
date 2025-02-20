@@ -156,17 +156,25 @@ def visualize_with_background(parcel_file, map_image, density, min_distance, res
     ax.set_xlabel('Долгота')
     ax.set_ylabel('Широта')
 
-    # Сохранение результата
+    # Показать и сохранить результат
+    plt.savefig('buildings.png')
     plt.show()
+    print(f"Графическое представление застройки сохранено в файле: 'buildings.png'")
+    print("-"*30)
 
 
-visualize_with_background(
-    parcel_file='input3.geojson',           #  Входные данные - границы участка
-    map_image='map.png',                    #  Входные данные - карта
-    density=30,                             #  Входные данные - плотность застройки
-    min_distance=10,                        #  Входные данные - минимальное расстояние между зданиями
-    restricted_file='restricted.geojson'    #  Входные данные - запрещенные зоны
-)
+def main():
+    visualize_with_background(
+        parcel_file='input4.geojson',           #  Входные данные - границы участка
+        map_image='map.png',                    #  Входные данные - карта
+        density=30,                             #  Входные данные - плотность застройки
+        min_distance=10,                        #  Входные данные - минимальное расстояние между зданиями
+        restricted_file='restricted.geojson'    #  Входные данные - запрещенные зоны
+    )
+
+if __name__ == "__main__":
+    print("Запуск программы ...")
+    main()
 
 
 
